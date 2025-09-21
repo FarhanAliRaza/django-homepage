@@ -1,15 +1,35 @@
 # django-homepage
 
-When it comes to design, everyone is a critic.
+This is a first draft / proof of concept to see what a redesigned https://www.djangoproject.com might look like. A lot of of it is placeholder HTML and content, but maybe it's useful to start some conversations.
 
-With that out of the way, this is a strawman to see what a redesigned https://www.djangoproject.com might look like.
+I appreciate any constructive criticism or feedback, but especially looking for actual PRs or at least issues with action items. In other words, "talk is cheap, show me the code".
+
+On merges to `main`, this site gets automatically deployed to https://django-homepage.adamghill.com.
 
 ## Goals
 
-- be more explicit about what use cases Django solve
-- unique features compared to other web frameworks
+- make Django exciting, fresh, and modern
+- be more explicit about what use cases Django solves
+  - server-sside websites
+  - API backend
+  - interactive websites with frontend frameworks du jour
+  - background worker processing
+  - CMS
+- hype up features (and show examples/code)
+  - ORM
+  - admin
+  - management commands
+  - third-party ecosystem
+  - url routing
 - highlight companies that use Django, i.e. social proof
-- highight sponsors
+- callout sponsors
+- talk about number of installs and the scale of how Django is currently used
+
+## Non-negotiables
+
+- accessible
+- look good on mobile devices
+- JavaScript shouldn't be required, but can be used for progressive enhancement
 
 ## Local dev
 
