@@ -7,7 +7,7 @@ WORKDIR /app
 COPY . .
 
 # Expose port 8000 for the HTTP server
-EXPOSE 8000
+EXPOSE 80
 
 # Run the HTTP server when the container launches
-CMD ["python", "-m", "http.server", "8000"]
+CMD ["python", "-m", "http.server", "80"]
