@@ -2,13 +2,16 @@
 
 This is a first draft / proof of concept to see what a redesigned https://www.djangoproject.com might look like. A lot of of it is placeholder HTML and content, but maybe it's useful to start some conversations.
 
-I appreciate any constructive criticism or feedback, but especially looking for actual PRs or at least issues with action items. In other words, "talk is cheap, show me the code".
+I appreciate any constructive criticism or feedback, but especially looking for actual PRs or at least issues with action items. In other words, "talk is cheap, show me the code". 😉
 
-On merges to `main`, this site gets automatically deployed to https://django-homepage.adamghill.com.
+## Notes
+
+- Prior art from a previous user research done by 20tab: https://drive.google.com/drive/folders/1Tmdwtqo-SgsmUa_LNphgDB1-PAH0v0YN
+- Forum post: https://forum.djangoproject.com/t/want-to-work-on-a-homepage-site-redesign/42909
 
 ## Goals
 
-- make Django exciting, fresh, and modern
+- show Django as exciting, fresh, and modern
 - be more explicit about what use cases Django solves
   - server-sside websites
   - API backend
@@ -40,3 +43,7 @@ On merges to `main`, this site gets automatically deployed to https://django-hom
 
 1. `docker compose up`
 2. `http://localhost:8000/`
+
+## Deploys
+
+On merges to `main`, this site gets automatically deployed to https://django-homepage.adamghill.com.
