@@ -112,48 +112,95 @@
       <div class="flex justify-between items-center h-16">
         <div class="flex items-center space-x-8">
           <div class="flex items-center space-x-3">
-            <div
-              class="w-8 h-8 bg-gradient-to-br from-django-green to-django-light-green rounded-lg flex items-center justify-center">
-              <span class="text-white font-bold text-lg">D</span>
-            </div>
-            <span class="text-xl font-bold text-django-green">Django</span>
+            <a href="https://www.djangoproject.com">
+              <img src="https://static.djangoproject.com/img/logos/django-logo-positive.svg" class="h-8" alt="Django"
+                title="Django Web Framework" />
+            </a>
           </div>
           <div class="hidden md:flex space-x-6">
-            <a href="#features" class="text-gray-600 hover:text-django-green transition-colors">Features</a>
-            <a href="#use-cases" class="text-gray-600 hover:text-django-green transition-colors">Use Cases</a>
-            <a href="#companies" class="text-gray-600 hover:text-django-green transition-colors">Who Uses Django</a>
-            <a href="#sponsors" class="text-gray-600 hover:text-django-green transition-colors">Sponsors</a>
+            <a href="#features" class="text-gray-600 hover:text-django-green transition-colors">
+              Features
+            </a>
+            <a href="#use-cases" class="text-gray-600 hover:text-django-green transition-colors">
+              Use Cases
+            </a>
+            <a href="#companies" class="text-gray-600 hover:text-django-green transition-colors">
+              Who Uses Django
+            </a>
+            <a href="#sponsors" class="text-gray-600 hover:text-django-green transition-colors">
+              Sponsors
+            </a>
           </div>
         </div>
         <div class="flex items-center space-x-4">
-          <a href="#" class="text-gray-600 hover:text-django-green transition-colors">Documentation</a>
+          <!-- Search -->
+          <form class="flex items-center max-w-sm mx-auto">
+            <label for="simple-search" class="sr-only">Search</label>
+            <div class="relative w-full">
+              <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                <svg width="20" height="20" class="DocSearch-Search-Icon" viewBox="0 0 20 20">
+                  <path
+                    d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z"
+                    stroke="currentColor" fill="none" fill-rule="evenodd" stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                </svg>
+              </div>
+              <input type="text" id="simple-search"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Search documentation..." required />
+            </div>
+            <button type="submit"
+              class="p-2.5 ms-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+              <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                viewBox="0 0 20 20">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+              </svg>
+              <span class="sr-only">Search</span>
+            </button>
+          </form>
+
           <a href="#"
-            class="bg-django-green text-white px-4 py-2 rounded-lg hover:bg-django-green/90 transition-colors">Get
-            Started</a>
+            class="bg-django-green text-white px-4 py-2 rounded-lg hover:bg-django-green/90 transition-colors">
+            Get Started
+          </a>
+
+          <a href="https://github.com/django/django" data-tooltip-target="tooltip-github-2"
+            class="hidden sm:inline-flex items-center justify-center text-gray-500 w-10 h-10 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 mr-1">
+            <svg class="w-[1.1rem] h-[1.1rem]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+              viewBox="0 0 20 20">
+              <path fill-rule="evenodd"
+                d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z"
+                clip-rule="evenodd"></path>
+            </svg>
+            <span class="sr-only">View on Github</span>
+          </a>
         </div>
       </div>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero-bg py-20 lg:py-32 relative overflow-hidden">
-    <div class="absolute inset-0">
-      <div class="absolute top-20 left-10 w-32 h-32 bg-django-light-green/20 rounded-full floating"></div>
-      <div class="absolute bottom-20 right-10 w-24 h-24 bg-django-orange/20 rounded-full floating"
-        style="animation-delay: 1s;"></div>
-      <div class="absolute top-1/2 left-1/3 w-16 h-16 bg-django-green/10 rounded-full floating"
-        style="animation-delay: 2s;"></div>
-    </div>
+  <section class="hero-bg py-20 relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
       <div class="text-center max-w-4xl mx-auto">
-        <div
-          class="inline-flex items-center space-x-2 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full border border-gray-200 mb-8">
-          <div class="w-2 h-2 bg-green-500 rounded-full pulse-dot"></div>
-          <span class="text-sm text-gray-600">Latest: Django 5.1 Released</span>
-        </div>
+        <a href="">
+          <div
+            class="inline-flex items-center space-x-2 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full border border-gray-200 mb-8">
+            <div class="w-2 h-2 bg-green-500 rounded-full pulse-dot"></div>
+            <span class="text-sm text-gray-600">
+              Latest: Django 5.2.6 Released
+            </span>
+          </div>
+        </a>
         <h1 class="text-5xl lg:text-7xl font-black mb-6 leading-tight">
-          <span class="gradient-text">The Web Framework</span><br>
-          <span class="text-gray-900 text-4xl lg:text-5xl">for Perfectionists with Deadlines</span>
+          <span class="gradient-text">
+            The <span id="tagline">Web</span> Framework
+          </span>
+          <br>
+          <span class="text-gray-900 text-4xl lg:text-5xl">
+            for perfectionists with deadlines
+          </span>
         </h1>
         <p class="text-xl lg:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
           Build robust, scalable web applications faster than ever.<br />
@@ -172,7 +219,9 @@
         </div>
         <div class="text-sm text-gray-500">
           <span>Quick start: </span>
-          <code class="bg-gray-100 px-2 py-1 rounded text-django-green font-mono">pip install Django</code>
+          <code class="bg-gray-100 p-1 rounded text-django-green font-mono">
+            pip install Django
+          </code>
         </div>
       </div>
     </div>
@@ -181,30 +230,69 @@
   <!-- Trusted By Section -->
   <section id="companies" class="py-16 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12">
+      <div class="text-center">
         <p class="text-gray-500 text-lg mb-8">
           Trusted by industry leaders and innovative startups worldwide
         </p>
 
-        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-8 items-center pt-12">
-          <div class="company-logo h-12 flex items-center justify-center">
+        <div class="grid md:grid-cols-4 lg:grid-cols-12 gap-8 items-center pt-4 pb-8">
+          <div class="company-logo">
             <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
               class="max-h-[160px] w-auto" />
           </div>
-          <div class=" company-logo h-12 flex items-center justify-center">
+          <div class="company-logo">
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Dropbox_logo.svg/1200px-Dropbox_logo.svg.png"
-              class="max-h-[160px] w-auto" />
+              class="max-h-[160px] w-auto" alt="Dropbox" title="Dropbox" />
           </div>
-          <div class="company-logo h-12 flex items-center justify-center">
+          <div class="company-logo">
             <img
-              src="https://static.dezeen.com/uploads/2017/01/mozilla-finalises-new-logo-design-graphics_dezeen_sq.gif"
-              class="max-h-[160px] w-auto" />
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Mozilla_logo_%282017%E2%80%932024%29.svg/1280px-Mozilla_logo_%282017%E2%80%932024%29.svg.png"
+              class="max-h-[160px] w-auto" alt="Mozilla" title="Mozilla" />
           </div>
-          <div class="company-logo h-12 flex items-center justify-center">
+          <div class="company-logo">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/NASA-Logo.svg/2516px-NASA-Logo.svg.png"
-              class="max-h-[160px] w-auto" />
+              class="max-h-[160px] w-auto" alt="NASA" title="NASA" />
           </div>
+          <div class="company-logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Disqus_d_icon_%28blue%29.svg"
+              class="max-h-[160px] w-auto" alt="Disqus" title="Disqus" />
+          </div>
+          <div class="company-logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/bf/Washington_Post_favicon.png"
+              class="max-h-[160px] w-auto" alt="The Washington Post" title="The Washington Post" />
+          </div>
+          <div class="company-logo">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Spotify_icon.svg/1982px-Spotify_icon.svg.png"
+              class="max-h-[160px] w-auto" alt="Spotify" title="Spotify" />
+          </div>
+          <div class="company-logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/BitBucket_font_awesome.svg"
+              class="max-h-[160px] w-auto" alt="BitBucket" title="BitBucket" />
+          </div>
+          <div class="company-logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Pinterest-logo.png"
+              class="max-h-[160px] w-auto" alt="Pinterest" title="Pinterest" />
+          </div>
+          <div class="company-logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Threads_%28app%29_logo.svg"
+              class="max-h-[160px] w-auto" alt="Threads" title="Threads" />
+          </div>
+          <div class="company-logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Ikea-logo.png" class="max-h-[160px] w-auto"
+              alt="Ikea" title="Ikea" />
+          </div>
+          <div class="company-logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Robinhood_Logo.png"
+              class="max-h-[160px] w-auto" alt="Robinhood" title="Robinhood" />
+          </div>
+        </div>
+
+        <div class="text-gray-500 text-sm max-w-3xl mx-auto leading-relaxed">
+          Other companies using Django include Door Dash, National Geographic, Udemy, Eventbrite, The
+          Guardian, The Motley Fool, New York Times, Air France, Sentry, The Atlantic, O'Reilly Publishing and many,
+          many more.
         </div>
       </div>
     </div>
@@ -217,7 +305,7 @@
         <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
           One Framework, <span class="gradient-text">Endless Possibilities</span>
         </h2>
-        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        <p class="text-xl text-gray-600 max-w-xl mx-auto">
           Whether you're building your first website or scaling to millions of users, Django adapts to your needs
         </p>
       </div>
@@ -231,13 +319,20 @@
                 d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9"></path>
             </svg>
           </div>
-          <h3 class="text-xl font-bold text-gray-900 mb-4">Server-Side Websites</h3>
-          <p class="text-gray-600 mb-6">Build dynamic, database-driven websites with Django's powerful templating system
-            and built-in admin interface.</p>
-          <div class="text-sm text-gray-500">
-            <span class="bg-gray-100 px-2 py-1 rounded mr-2">Templates</span>
-            <span class="bg-gray-100 px-2 py-1 rounded mr-2">Forms</span>
-            <span class="bg-gray-100 px-2 py-1 rounded">Sessions</span>
+          <h3 class="text-xl font-bold text-gray-900 mb-4">
+            Server-Side Websites
+          </h3>
+          <p class="text-gray-600 mb-6">
+            Build dynamic, database-driven websites with Django's powerful templating system
+            and built-in admin interface.
+          </p>
+          <div class="text-gray-500">
+            <span class="bg-gray-100 rounded p-1">Templates</span>
+            <span class="bg-gray-100 rounded p-1">Forms</span>
+            <span class="bg-gray-100 rounded p-1">Sessions</span>
+            <span class="bg-gray-100 rounded p-1">Auth</span>
+            <span class="bg-gray-100 rounded p-1">Cache</span>
+            <span class="bg-gray-100 rounded p-1">Database</span>
           </div>
         </div>
 
@@ -251,12 +346,14 @@
             </svg>
           </div>
           <h3 class="text-xl font-bold text-gray-900 mb-4">API Backends</h3>
-          <p class="text-gray-600 mb-6">Create robust REST APIs with Django REST Framework. Perfect for mobile apps,
-            SPAs, and microservices architecture.</p>
+          <p class="text-gray-600 mb-6">
+            Create robust APIs with your choice of third-party library.
+            Perfect for mobile apps, SPAs, and microservices architecture.
+          </p>
           <div class="text-sm text-gray-500">
-            <span class="bg-gray-100 px-2 py-1 rounded mr-2">REST API</span>
-            <span class="bg-gray-100 px-2 py-1 rounded mr-2">GraphQL</span>
-            <span class="bg-gray-100 px-2 py-1 rounded">Authentication</span>
+            <span class="bg-gray-100 p-1 rounded">REST API</span>
+            <span class="bg-gray-100 p-1 rounded">GraphQL</span>
+            <span class="bg-gray-100 p-1 rounded">Auth</span>
           </div>
         </div>
 
@@ -268,13 +365,17 @@
               </path>
             </svg>
           </div>
-          <h3 class="text-xl font-bold text-gray-900 mb-4">Interactive Web Apps</h3>
-          <p class="text-gray-600 mb-6">Seamlessly integrate with React, Vue, or any frontend framework. Django handles
-            the backend while your frontend shines.</p>
+          <h3 class="text-xl font-bold text-gray-900 mb-4">
+            Interactive Web Apps
+          </h3>
+          <p class="text-gray-600 mb-6">
+            Seamlessly integrate with HTMX, React, Vue, or any other frontend framework.
+            Let Django handle the backend while your frontend shines.
+          </p>
           <div class="text-sm text-gray-500">
-            <span class="bg-gray-100 px-2 py-1 rounded mr-2">React</span>
-            <span class="bg-gray-100 px-2 py-1 rounded mr-2">Vue.js</span>
-            <span class="bg-gray-100 px-2 py-1 rounded">WebSockets</span>
+            <span class="bg-gray-100 p-1 rounded">React</span>
+            <span class="bg-gray-100 p-1 rounded">Vue.js</span>
+            <span class="bg-gray-100 p-1 rounded">WebSockets</span>
           </div>
         </div>
 
@@ -287,13 +388,17 @@
               </path>
             </svg>
           </div>
-          <h3 class="text-xl font-bold text-gray-900 mb-4">Background Processing</h3>
-          <p class="text-gray-600 mb-6">Handle long-running tasks, scheduled jobs, and async processing with Celery
-            integration and management commands.</p>
+          <h3 class="text-xl font-bold text-gray-900 mb-4">
+            Background Processing
+          </h3>
+          <p class="text-gray-600 mb-6">
+            Handle long-running tasks, scheduled jobs, and async processing with background workers and custom
+            management commands.
+          </p>
           <div class="text-sm text-gray-500">
-            <span class="bg-gray-100 px-2 py-1 rounded mr-2">Celery</span>
-            <span class="bg-gray-100 px-2 py-1 rounded mr-2">Cron Jobs</span>
-            <span class="bg-gray-100 px-2 py-1 rounded">Queue Systems</span>
+            <span class="bg-gray-100 p-1 rounded">Tasks</span>
+            <span class="bg-gray-100 p-1 rounded">Cron Jobs</span>
+            <span class="bg-gray-100 p-1 rounded">Queue Systems</span>
           </div>
         </div>
 
@@ -306,13 +411,16 @@
               </path>
             </svg>
           </div>
-          <h3 class="text-xl font-bold text-gray-900 mb-4">Content Management</h3>
-          <p class="text-gray-600 mb-6">Built-in admin interface and CMS capabilities. Perfect for content-heavy sites,
-            blogs, and editorial workflows.</p>
+          <h3 class="text-xl font-bold text-gray-900 mb-4">
+            Content Management
+          </h3>
+          <p class="text-gray-600 mb-6">
+            Built-in admin interface and features perfect for content-heavy sites,
+            blogs, and editorial workflows. Or choose one of several purpose-built CMS frameworks.</p>
           <div class="text-sm text-gray-500">
-            <span class="bg-gray-100 px-2 py-1 rounded mr-2">Admin Panel</span>
-            <span class="bg-gray-100 px-2 py-1 rounded mr-2">User Roles</span>
-            <span class="bg-gray-100 px-2 py-1 rounded">Content Types</span>
+            <span class="bg-gray-100 p-1 rounded">Admin</span>
+            <span class="bg-gray-100 p-1 rounded">User Roles</span>
+            <span class="bg-gray-100 p-1 rounded">Content Types</span>
           </div>
         </div>
 
@@ -329,9 +437,9 @@
           <p class="text-gray-600 mb-6">Security-first design with built-in protection against common vulnerabilities.
             Scale from prototype to production.</p>
           <div class="text-sm text-gray-500">
-            <span class="bg-gray-100 px-2 py-1 rounded mr-2">Security</span>
-            <span class="bg-gray-100 px-2 py-1 rounded mr-2">Scalability</span>
-            <span class="bg-gray-100 px-2 py-1 rounded">Testing</span>
+            <span class="bg-gray-100 p-1 rounded">Security</span>
+            <span class="bg-gray-100 p-1 rounded">Scalability</span>
+            <span class="bg-gray-100 p-1 rounded">Testing</span>
           </div>
         </div>
       </div>
@@ -345,7 +453,7 @@
         <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
           <span class="gradient-text">Powerful Features</span> Out of the Box
         </h2>
-        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        <p class="text-xl text-gray-600 max-w-xl mx-auto">
           Django includes everything you need to build modern web applications without reinventing the wheel
         </p>
       </div>
@@ -353,8 +461,10 @@
       <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
         <div>
           <h3 class="text-3xl font-bold text-gray-900 mb-6">Powerful Database ORM</h3>
-          <p class="text-lg text-gray-600 mb-6">Work with databases using Python instead of SQL. Django's ORM supports
-            PostgreSQL, MySQL, SQLite, and Oracle with automatic migrations and relationship handling.</p>
+          <p class="text-lg text-gray-600 mb-6">
+            Query databases using Python instead of SQL. Django's ORM supports
+            PostgreSQL, MySQL, SQLite, and Oracle out of the box.
+          </p>
           <div class="space-y-3">
             <div class="flex items-center space-x-3">
               <div class="w-2 h-2 bg-django-green rounded-full"></div>
@@ -366,7 +476,12 @@
             </div>
             <div class="flex items-center space-x-3">
               <div class="w-2 h-2 bg-django-green rounded-full"></div>
-              <span class="text-gray-700">Multiple database support</span>
+              <span class="text-gray-700">Powerful joins and aggregation capabilities</span>
+            </div>
+            <div class="flex items-center space-x-3">
+              <div class="w-2 h-2 bg-django-green rounded-full"></div>
+              <span class="text-gray-700">MongoDB, Microsoft Sql Server, and additional database support available in
+                official third-party packages</span>
             </div>
           </div>
         </div>
@@ -404,12 +519,14 @@
         </div>
         <div class="order-1 lg:order-2">
           <h3 class="text-3xl font-bold text-gray-900 mb-6">Automatic Admin Interface</h3>
-          <p class="text-lg text-gray-600 mb-6">Get a fully functional admin interface automatically generated from your
-            models. Perfect for content management, data entry, and user management.</p>
+          <p class="text-lg text-gray-600 mb-6">
+            Get a fully functional admin interface automatically generated for your database models. Perfect for
+            content management, data entry, and user management.
+          </p>
           <div class="space-y-3">
             <div class="flex items-center space-x-3">
               <div class="w-2 h-2 bg-django-green rounded-full"></div>
-              <span class="text-gray-700">Auto-generated from models</span>
+              <span class="text-gray-700">Auto-generated from database models</span>
             </div>
             <div class="flex items-center space-x-3">
               <div class="w-2 h-2 bg-django-green rounded-full"></div>
@@ -417,7 +534,11 @@
             </div>
             <div class="flex items-center space-x-3">
               <div class="w-2 h-2 bg-django-green rounded-full"></div>
-              <span class="text-gray-700">User permissions & groups</span>
+              <span class="text-gray-700">Authorization via user permissions & groups</span>
+            </div>
+            <div class="flex items-center space-x-3">
+              <div class="w-2 h-2 bg-django-green rounded-full"></div>
+              <span class="text-gray-700">Search, filtering, and foreign-key support</span>
             </div>
           </div>
         </div>
@@ -446,7 +567,11 @@
             </svg>
           </div>
           <h4 class="text-xl font-bold text-gray-900 mb-3">Rich Ecosystem</h4>
-          <p class="text-gray-600">Thousands of third-party packages for authentication, APIs, payments, and more.</p>
+          <p class="text-gray-600">
+            Over ten thousand <a href="https://djangopackages.org">third-party packages</a> to handle
+            authentication,
+            APIs, payment processing, or anything else you can think of.
+          </p>
         </div>
 
         <div class="text-center">
@@ -470,9 +595,13 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid lg:grid-cols-2 gap-12 items-center">
         <div>
-          <h2 class="text-4xl font-bold mb-6">Get Started in Minutes</h2>
-          <p class="text-xl text-green-100 mb-8">Django's philosophy of "convention over configuration" means you can
-            build powerful applications with minimal boilerplate code.</p>
+          <h2 class="text-4xl font-bold mb-6">
+            Get Started in Minutes
+          </h2>
+          <p class="text-xl text-green-100 mb-8">
+            Django's philosophy of "batteries included" means you can build powerful applications with minimal
+            boilerplate code.
+          </p>
           <div class="flex flex-col sm:flex-row gap-4">
             <a href="#"
               class="bg-white text-django-green px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center">
@@ -488,8 +617,8 @@
           <div class="text-gray-500"># Create a new Django project</div>
           <div class="text-white">$ django-admin startproject mysite</div>
           <div class="text-white">$ cd mysite</div>
-          <div class="text-white">$ python manage.py migrate</div>
-          <div class="text-white">$ python manage.py runserver</div>
+          <div class="text-white">$ python3 manage.py migrate</div>
+          <div class="text-white">$ python3 manage.py runserver</div>
           <br>
           <div class="text-gray-500"># views.py</div>
           <div>
@@ -831,47 +960,109 @@
 
   <!-- Smooth scrolling JavaScript -->
   <script>
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
+    window.addEventListener('DOMContentLoaded', function () {
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      });
+
+      // Add scroll effect to navbar
+      window.addEventListener('scroll', function () {
+        const navbar = document.querySelector('nav');
+
+        if (window.scrollY > 100) {
+          navbar.classList.add('shadow-lg');
+        } else {
+          navbar.classList.remove('shadow-lg');
         }
       });
-    });
 
-    // Add scroll effect to navbar
-    window.addEventListener('scroll', function () {
-      const navbar = document.querySelector('nav');
-      if (window.scrollY > 100) {
-        navbar.classList.add('shadow-lg');
-      } else {
-        navbar.classList.remove('shadow-lg');
+      // Add intersection observer for animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-fade-in-up');
+          }
+        });
+      }, observerOptions);
+
+      // Observe feature cards
+      document.querySelectorAll('.feature-card').forEach(card => {
+        observer.observe(card);
+      });
+
+      function typewriterReplace(el, newText, opts = {}) {
+        const {
+          deleteSpeed = 60,   // ms per deleted char
+          typeSpeed = 80,     // ms per typed char
+          pauseBeforeType = 250
+        } = opts;
+
+        return new Promise(resolve => {
+          const oldText = el.textContent || '';
+          let i = oldText.length;
+
+          // Step 1: delete characters
+          const del = () => {
+            if (i > 0) {
+              el.textContent = oldText.slice(0, --i);
+              setTimeout(del, deleteSpeed);
+            } else {
+              setTimeout(type, pauseBeforeType);
+            }
+          };
+
+          // Step 2: type new text
+          let j = 0;
+          const type = () => {
+            if (j < newText.length) {
+              el.textContent += newText[j++];
+              setTimeout(type, typeSpeed);
+            } else {
+              resolve();
+            }
+          };
+
+          del();
+        });
       }
-    });
 
-    // Add intersection observer for animations
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver(function (entries) {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animate-fade-in-up');
+      // Optional: cycle through multiple words
+      async function cycleWords(el, words, delay = 1200, opts = {}) {
+        let idx = 0;
+        while (true) {
+          const next = words[idx % words.length];
+          await typewriterReplace(el, next, opts);
+          await new Promise(r => setTimeout(r, delay));
+          idx++;
         }
-      });
-    }, observerOptions);
+      }
 
-    // Observe feature cards
-    document.querySelectorAll('.feature-card').forEach(card => {
-      observer.observe(card);
+      // Change tagline
+      const el = document.querySelector('#tagline');
+      console.log('ttt', tagline)
+
+      cycleWords(el, ['Web', 'API', 'AI', 'Developer', 'Backend', 'Stable', 'Task Worker'], 1200, {
+        deleteSpeed: 60,
+        typeSpeed: 80,
+        pauseBeforeType: 1000
+      });
+
     });
   </script>
 </body>
