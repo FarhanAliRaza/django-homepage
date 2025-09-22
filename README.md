@@ -1,19 +1,19 @@
 # django-homepage
 
-This is a first draft / proof of concept to see what a redesigned https://www.djangoproject.com might look like. A lot of of it is placeholder HTML and content, but maybe it's useful to start some conversations.
+This is a proof of concept to see what a redesigned https://www.djangoproject.com might look like. A lot of it is placeholder HTML and content, but maybe it's useful to start some conversations.
 
-I appreciate any constructive criticism or feedback, but especially looking for actual PRs or at least issues with action items. In other words, "talk is cheap, show me the code". 😉
+I do appreciate any constructive criticism or feedback, but I am especially looking for actual PRs or at least issues with action items. In other words, "talk is cheap, show me the code". 😉
 
 ## Notes
 
-- Prior art from a previous user research done by 20tab: https://drive.google.com/drive/folders/1Tmdwtqo-SgsmUa_LNphgDB1-PAH0v0YN
-- Forum post: https://forum.djangoproject.com/t/want-to-work-on-a-homepage-site-redesign/42909
+- [Prior art](https://drive.google.com/drive/folders/1Tmdwtqo-SgsmUa_LNphgDB1-PAH0v0YN) from previous user research done by 20tab
+- [Forum post asking for help](https://forum.djangoproject.com/t/want-to-work-on-a-homepage-site-redesign/42909)
 
 ## Goals
 
 - show Django as exciting, fresh, and modern
 - be more explicit about what use cases Django solves
-  - server-sside websites
+  - server-side websites
   - API backend
   - interactive websites with frontend frameworks du jour
   - background worker processing
@@ -25,7 +25,7 @@ I appreciate any constructive criticism or feedback, but especially looking for 
   - third-party ecosystem
   - url routing
 - highlight companies that use Django, i.e. social proof
-- callout sponsors
+- call out sponsors
 - talk about number of installs and the scale of how Django is currently used
 
 ## Non-negotiables
@@ -46,4 +46,4 @@ I appreciate any constructive criticism or feedback, but especially looking for 
 
 ## Deploys
 
-On merges to `main`, this site gets automatically deployed to https://django-homepage.adamghill.com.
+On merges to `main`, this site gets automatically deployed to https://django-homepage.adamghill.com for stakeholders.
