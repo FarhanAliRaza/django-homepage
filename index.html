@@ -277,7 +277,7 @@
               >
               <div class="relative">
                 <div
-                  class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+                  class="absolute inset-y-0 start-0 hidden lg:flex items-center ps-3 pointer-events-none"
                 >
                   <svg
                     class="w-4 h-4 text-gray-500"
@@ -299,22 +299,37 @@
                 <input
                   type="search"
                   id="search"
-                  class="block w-full p-3 ps-9 bg-white border border-gray-200 text-gray-900 text-sm rounded-lg focus:ring-django-green focus:border-django-green placeholder:text-gray-400"
-                  placeholder="Search documentation..."
+                  class="block w-full p-2.5 ps-2.5 lg:ps-9 bg-white border border-gray-200 text-gray-900 text-sm rounded-lg focus:ring-django-green focus:border-django-green placeholder:text-gray-400"
+                  placeholder="Search docs..."
                   required
                 />
                 <button
                   type="button"
-                  class="absolute end-1.5 bottom-1.5 text-white bg-django-green hover:bg-django-green/90 box-border border border-transparent focus:ring-4 focus:ring-django-green/30 font-medium leading-5 rounded text-xs px-3 py-1.5 focus:outline-none"
+                  class="absolute end-1.5 bottom-1.5 text-white bg-django-green hover:bg-django-green/90 box-border border border-transparent focus:ring-4 focus:ring-django-green/30 font-medium leading-5 rounded text-xs px-2 lg:px-3 py-1.5 focus:outline-none flex items-center justify-center"
                 >
-                  Search
+                  <svg
+                    class="w-4 h-4 lg:hidden"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-width="2"
+                      d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"
+                    />
+                  </svg>
+                  <span class="hidden lg:inline">Search</span>
+                  <span class="sr-only lg:hidden">Search</span>
                 </button>
               </div>
             </form>
 
             <a
               href="#"
-              class="bg-django-green text-white px-4 py-2 rounded-lg hover:bg-django-green/90 transition-colors"
+              class="bg-django-green text-white text-nowrap text-sm md:text-base px-2 py-1 md:px-4 md:py-2 rounded-lg hover:bg-django-green/90 transition-colors"
             >
               Get Started
             </a>
@@ -709,7 +724,10 @@
                 </div>
 
                 <!-- Admin Tab -->
-                <div id="tab-admin" class="tab-content hidden w-full max-w-full">
+                <div
+                  id="tab-admin"
+                  class="tab-content hidden w-full max-w-full"
+                >
                   <div class="space-y-4 overflow-x-auto w-full max-w-full">
                     <div
                       class="text-green-400 font-mono text-sm sm:text-base leading-relaxed code-text-mobile"
