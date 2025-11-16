@@ -182,6 +182,43 @@
       .install-tab-content.hidden {
         display: none;
       }
+
+      /* Tab header scrolling */
+      .tab-header-scroll {
+        scrollbar-width: thin; /* Firefox - thin scrollbar */
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+      }
+
+      .tab-header-scroll::-webkit-scrollbar {
+        height: 3px;
+      }
+
+      .tab-header-scroll::-webkit-scrollbar-track {
+        background: rgba(75, 85, 99, 0.1);
+        border-radius: 3px;
+      }
+
+      .tab-header-scroll::-webkit-scrollbar-thumb {
+        background: rgba(68, 183, 139, 0.6);
+        border-radius: 3px;
+      }
+
+      .tab-header-scroll::-webkit-scrollbar-thumb:hover {
+        background: rgba(68, 183, 139, 0.8);
+      }
+
+      /* Responsive code box styles */
+      @media (max-width: 768px) {
+        /* Reduce padding on mobile for code boxes */
+        .code-box-content {
+          padding: 1rem !important;
+        }
+
+        /* Smaller font size for code on mobile */
+        .code-text-mobile {
+          font-size: 0.75rem !important;
+        }
+      }
     </style>
   </head>
 
@@ -313,7 +350,7 @@
         <!-- Split Layout -->
         <div class="grid lg:grid-cols-2 gap-12 items-center">
           <!-- Left Side - Why Django -->
-          <div class="space-y-8">
+          <div class="space-y-8 w-full max-w-full">
             <!-- Version Badge -->
             <a href="" class="inline-block">
               <div
@@ -388,28 +425,28 @@
             </div>
 
             <!-- Quick Start Command with Tabs -->
-            <div class="bg-gray-900 rounded-lg overflow-hidden">
+            <div class="bg-gray-900 rounded-lg w-full max-w-full">
               <!-- Installation Method Tabs -->
               <div
-                class="flex items-center gap-1 px-3 pt-3 border-b border-gray-800"
+                class="flex flex-nowrap items-center gap-1 px-3 pt-3 border-b border-gray-800 overflow-x-auto tab-header-scroll"
               >
                 <button
                   onclick="switchInstallTab('pip')"
-                  class="install-tab-button active px-3 py-2 text-xs font-medium transition-all rounded-t-lg"
+                  class="install-tab-button active px-3 py-2 text-xs font-medium transition-all rounded-t-lg flex-shrink-0 whitespace-nowrap"
                   data-install-tab="pip"
                 >
                   pip
                 </button>
                 <button
                   onclick="switchInstallTab('uv')"
-                  class="install-tab-button px-3 py-2 text-xs font-medium transition-all rounded-t-lg"
+                  class="install-tab-button px-3 py-2 text-xs font-medium transition-all rounded-t-lg flex-shrink-0 whitespace-nowrap"
                   data-install-tab="uv"
                 >
                   uv
                 </button>
                 <button
                   onclick="switchInstallTab('poetry')"
-                  class="install-tab-button px-3 py-2 text-xs font-medium transition-all rounded-t-lg"
+                  class="install-tab-button px-3 py-2 text-xs font-medium transition-all rounded-t-lg flex-shrink-0 whitespace-nowrap"
                   data-install-tab="poetry"
                 >
                   poetry
@@ -417,13 +454,14 @@
               </div>
 
               <!-- Command Display -->
-              <div class="p-4">
+              <div class="p-3 sm:p-4">
                 <div
                   id="install-pip"
                   class="install-tab-content active flex items-center space-x-2"
                 >
-                  <span class="text-gray-400 text-sm">$</span>
-                  <code class="text-green-400 font-mono text-sm flex-1"
+                  <span class="text-gray-400 text-xs sm:text-sm">$</span>
+                  <code
+                    class="text-green-400 font-mono text-xs sm:text-sm flex-1"
                     >pip install Django</code
                   >
                   <button
@@ -450,8 +488,9 @@
                   id="install-uv"
                   class="install-tab-content hidden flex items-center space-x-2"
                 >
-                  <span class="text-gray-400 text-sm">$</span>
-                  <code class="text-green-400 font-mono text-sm flex-1"
+                  <span class="text-gray-400 text-xs sm:text-sm">$</span>
+                  <code
+                    class="text-green-400 font-mono text-xs sm:text-sm flex-1"
                     >uv pip install Django</code
                   >
                   <button
@@ -478,8 +517,9 @@
                   id="install-poetry"
                   class="install-tab-content hidden flex items-center space-x-2"
                 >
-                  <span class="text-gray-400 text-sm">$</span>
-                  <code class="text-green-400 font-mono text-sm flex-1"
+                  <span class="text-gray-400 text-xs sm:text-sm">$</span>
+                  <code
+                    class="text-green-400 font-mono text-xs sm:text-sm flex-1"
                     >poetry add Django</code
                   >
                   <button
@@ -506,23 +546,23 @@
           </div>
 
           <!-- Right Side - Interactive Demo -->
-          <div class="relative">
+          <div class="relative w-full max-w-full overflow-hidden">
             <!-- Feature Tabs -->
             <div
-              class="bg-gray-900/95 backdrop-blur-lg rounded-2xl border border-gray-800 overflow-hidden shadow-2xl min-h-[500px]"
+              class="bg-gray-900/95 backdrop-blur-lg rounded-2xl border border-gray-800 shadow-2xl min-h-[400px] sm:min-h-[500px] w-full max-w-full"
             >
               <!-- Tab Header -->
               <div
-                class="flex items-center gap-2 p-3 border-b border-gray-800 overflow-x-auto"
+                class="flex flex-nowrap items-center gap-1 sm:gap-2 p-2 sm:p-3 border-b border-gray-800 overflow-x-auto tab-header-scroll"
               >
                 <button
                   onclick="switchTab('orm')"
-                  class="tab-button active px-4 py-2 rounded-lg text-sm font-medium transition-all whitespace-nowrap"
+                  class="tab-button active px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg text-xs sm:text-sm font-medium transition-all whitespace-nowrap flex-shrink-0"
                   data-tab="orm"
                 >
-                  <span class="flex items-center gap-2">
+                  <span class="flex items-center gap-1 sm:gap-2">
                     <svg
-                      class="w-4 h-4"
+                      class="w-3 h-3 sm:w-4 sm:h-4"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -539,12 +579,12 @@
                 </button>
                 <button
                   onclick="switchTab('admin')"
-                  class="tab-button px-4 py-2 rounded-lg text-sm font-medium transition-all whitespace-nowrap"
+                  class="tab-button px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg text-xs sm:text-sm font-medium transition-all whitespace-nowrap flex-shrink-0"
                   data-tab="admin"
                 >
-                  <span class="flex items-center gap-2">
+                  <span class="flex items-center gap-1 sm:gap-2">
                     <svg
-                      class="w-4 h-4"
+                      class="w-3 h-3 sm:w-4 sm:h-4"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -561,12 +601,12 @@
                 </button>
                 <button
                   onclick="switchTab('security')"
-                  class="tab-button px-4 py-2 rounded-lg text-sm font-medium transition-all whitespace-nowrap"
+                  class="tab-button px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg text-xs sm:text-sm font-medium transition-all whitespace-nowrap flex-shrink-0"
                   data-tab="security"
                 >
-                  <span class="flex items-center gap-2">
+                  <span class="flex items-center gap-1 sm:gap-2">
                     <svg
-                      class="w-4 h-4"
+                      class="w-3 h-3 sm:w-4 sm:h-4"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -583,12 +623,12 @@
                 </button>
                 <button
                   onclick="switchTab('forms')"
-                  class="tab-button px-4 py-2 rounded-lg text-sm font-medium transition-all whitespace-nowrap"
+                  class="tab-button px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg text-xs sm:text-sm font-medium transition-all whitespace-nowrap flex-shrink-0"
                   data-tab="forms"
                 >
-                  <span class="flex items-center gap-2">
+                  <span class="flex items-center gap-1 sm:gap-2">
                     <svg
-                      class="w-4 h-4"
+                      class="w-3 h-3 sm:w-4 sm:h-4"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -605,12 +645,12 @@
                 </button>
                 <button
                   onclick="switchTab('packages')"
-                  class="tab-button px-4 py-2 rounded-lg text-sm font-medium transition-all whitespace-nowrap"
+                  class="tab-button px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg text-xs sm:text-sm font-medium transition-all whitespace-nowrap flex-shrink-0"
                   data-tab="packages"
                 >
-                  <span class="flex items-center gap-2">
+                  <span class="flex items-center gap-1 sm:gap-2">
                     <svg
-                      class="w-4 h-4"
+                      class="w-3 h-3 sm:w-4 sm:h-4"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -628,12 +668,12 @@
               </div>
 
               <!-- Tab Content -->
-              <div class="p-8">
+              <div class="p-4 sm:p-8 code-box-content w-full max-w-full">
                 <!-- ORM Tab -->
-                <div id="tab-orm" class="tab-content active">
-                  <div class="space-y-4">
+                <div id="tab-orm" class="tab-content active w-full max-w-full">
+                  <div class="space-y-4 overflow-x-auto w-full max-w-full">
                     <div
-                      class="text-green-400 font-mono text-base leading-relaxed"
+                      class="text-green-400 font-mono text-sm sm:text-base leading-relaxed code-text-mobile"
                     >
                       <div class="text-gray-500 mb-2"># models.py</div>
                       <div>
@@ -669,10 +709,10 @@
                 </div>
 
                 <!-- Admin Tab -->
-                <div id="tab-admin" class="tab-content hidden">
-                  <div class="space-y-4">
+                <div id="tab-admin" class="tab-content hidden w-full max-w-full">
+                  <div class="space-y-4 overflow-x-auto w-full max-w-full">
                     <div
-                      class="text-green-400 font-mono text-base leading-relaxed"
+                      class="text-green-400 font-mono text-sm sm:text-base leading-relaxed code-text-mobile"
                     >
                       <div class="text-gray-500 mb-2"># admin.py</div>
                       <div>
@@ -713,9 +753,9 @@
 
                 <!-- Security Tab -->
                 <div id="tab-security" class="tab-content hidden">
-                  <div class="space-y-4">
+                  <div class="space-y-4 overflow-x-auto">
                     <div
-                      class="text-green-400 font-mono text-base leading-relaxed"
+                      class="text-green-400 font-mono text-sm sm:text-base leading-relaxed code-text-mobile"
                     >
                       <div class="text-gray-500 mb-2"># views.py</div>
                       <div>
@@ -760,9 +800,9 @@
 
                 <!-- Forms Tab -->
                 <div id="tab-forms" class="tab-content hidden">
-                  <div class="space-y-4">
+                  <div class="space-y-4 overflow-x-auto">
                     <div
-                      class="text-green-400 font-mono text-base leading-relaxed"
+                      class="text-green-400 font-mono text-sm sm:text-base leading-relaxed code-text-mobile"
                     >
                       <div class="text-gray-500 mb-2"># forms.py</div>
                       <div>
@@ -799,9 +839,9 @@
 
                 <!-- Packages Tab -->
                 <div id="tab-packages" class="tab-content hidden">
-                  <div class="space-y-4">
+                  <div class="space-y-4 overflow-x-auto">
                     <div
-                      class="text-green-400 font-mono text-base leading-relaxed"
+                      class="text-green-400 font-mono text-sm sm:text-base leading-relaxed code-text-mobile"
                     >
                       <div class="text-gray-500 mb-2"># settings.py</div>
                       <div>INSTALLED_APPS = [</div>
@@ -1235,7 +1275,7 @@
             </div>
           </div>
           <div
-            class="bg-gray-900 rounded-2xl p-6 text-green-400 font-mono text-sm overflow-x-auto"
+            class="bg-gray-900 rounded-2xl p-4 sm:p-6 text-green-400 font-mono text-xs sm:text-sm overflow-x-auto"
           >
             <div class="text-gray-500"># models.py</div>
             <div class="mt-2">
@@ -1432,7 +1472,7 @@
             </div>
           </div>
           <div
-            class="bg-gray-900 rounded-2xl p-6 text-green-400 font-mono text-sm overflow-x-auto"
+            class="bg-gray-900 rounded-2xl p-4 sm:p-6 text-green-400 font-mono text-xs sm:text-sm overflow-x-auto"
           >
             <div class="text-gray-500"># Create a new Django project</div>
             <div class="text-white">$ django-admin startproject mysite</div>
